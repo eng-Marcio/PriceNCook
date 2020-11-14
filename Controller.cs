@@ -27,6 +27,7 @@ namespace PriceNCook
         public const int PRODUCTS = 2;
         public const int ORDERS = 3;
         public const string mac = "20689D8090FD"; //"20689D8090FD"8091338B1E69
+        //mac protection: simple way to garantee the software wont be copied without being licenced before
 
         #endregion
         #region constructor
@@ -36,7 +37,7 @@ namespace PriceNCook
             {
                 System.IO.File.WriteAllText(Path.Combine(Directory.GetCurrentDirectory(), "mac.txt"), GetMACAddress());
                 frontEnd.Close();
-                System.Environment.Exit(0);
+                System.Environment.Exit(0); //when unnexpected user is using the app, it automatic closes, as if it crashed
             }
             this.frontEndControl = frontEnd;
             initializeDatabase();
