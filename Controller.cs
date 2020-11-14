@@ -26,14 +26,14 @@ namespace PriceNCook
         public const int RECEIPTS = 1;
         public const int PRODUCTS = 2;
         public const int ORDERS = 3;
-        public const string mac = "20689D8090FD"; //"20689D8090FD"8091338B1E69
+        public const string mac = "8091338B1E69"; //"20689D8090FD"8091338B1E69
         //mac protection: simple way to garantee the software wont be copied without being licenced before
 
         #endregion
         #region constructor
         public Controller(FrontEndControl frontEnd)
         {
-            if(!GetMACAddress().Equals(mac))
+            if (!GetMACAddress().Equals(mac))
             {
                 System.IO.File.WriteAllText(Path.Combine(Directory.GetCurrentDirectory(), "mac.txt"), GetMACAddress());
                 frontEnd.Close();
@@ -42,6 +42,7 @@ namespace PriceNCook
             this.frontEndControl = frontEnd;
             initializeDatabase();
             backupParallel();
+            //insert new icons
         }
         #endregion
 
