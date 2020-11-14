@@ -12,6 +12,7 @@ At last and more important, once you update an item price, all products which us
 >> Structure:
 
 The project follows a simple object orientation architecture (see figure below). The Controller class centralizes the flow of information through the software (as it is a common line in all my projects). Futhermore, you have FrontEndControl which takes care of all front-end aspects of the program using Forms to do so. The Database class and further are Serializable classes, which are serialized to store the changes made by the user. It is on those serializable classes where all information regarding the items and receipts are stored.
+![alt text](https://github.com/eng-Marcio/PriceNCook/blob/master/mysc/classDiagram.jpg?raw=true)
 
 It is known that a Database would provide a better format to store user data. However, as this project is a prototype, serializing and methods for CRUD directly on code are a "fast and furious" way to come up with a testable software solution. The project uses only C#, there is a working version on the bin file which can be used to check the software :) 
 
