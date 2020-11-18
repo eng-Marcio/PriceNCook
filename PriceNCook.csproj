@@ -113,6 +113,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Mysc\classDiagram.PNG" />
+    <Content Include="Mysc\print1.PNG" />
+    <Content Include="Mysc\print2.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
